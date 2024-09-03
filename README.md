@@ -20,4 +20,4 @@ A user-friendly web application that converts JPEG and PNG images to PDF with ju
 - **npm**: Package manager for managing dependencies.
 
 ## Live Demo: 
-- **Link**: imgs-2-pdf.vercel.app
+- **Link**: imgs-to-pdf.vercel.app
