@@ -1,124 +1,165 @@
-html{
-    margin: 0px; 
-    padding: 0px;
+/* Updated index.css */
+html {
+    margin: 0;
+    padding: 0;
     height: 100%;
-}
-body {
-    margin: 0px;
-    padding: 0px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
     height: 100%;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-}
-
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-}
-
-.options {
-    overflow: auto;
-    background-color: white;
-    border-left: 1px solid lightgray;
-    padding: 10px;
-}
-
-#root{
-    margin: 0px;
-    padding: 0px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    width: 100%;
-}
-
-.option-btn{
-    display: none;
-}
-
-@media screen and (max-width: 600px) {
-    .options {
-        position: fixed;
-        right: 0px;
-        left: 0px;
-        bottom: 0px;
-        background-color: white;
-        display: none;
-    }
-    .option-btn{
-        display: inline;
-    }
-    .dropzone{
-        display: none;
-        flex: 1;
-    }
-}
-
-.landing-page{
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffeb3b; /* Vibrant yellow */
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    color: #3f51b5; /* Vibrant indigo */
+  }
+  
+  code {
+    font-family: 'Fira Code', monospace;
+    font-size: 14px;
+    background-color: #ffffff; /* White background */
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: #d32f2f; /* Vibrant red */
+  }
+  
+  .options {
+    overflow: auto;
+    background-color: #ffffff; /* White background */
+    border-left: 2px solid #ff5722; /* Vibrant orange */
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Margin at the bottom */
+    border-radius: 8px; /* Rounded corners */
+  }
+  
+  #root {
+    margin: 0;
+    padding: 0;
     height: 100%;
-}
-
-.big-btn{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .option-btn {
+    display: none;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .options {
+      position: fixed;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background-color: #ffffff; /* White background */
+      padding: 20px;
+      display: none;
+      border-radius: 12px 12px 0 0; /* Rounded corners at the top */
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    }
+    .option-btn {
+      display: inline;
+      padding: 10px 20px;
+      background-color: #9c27b0; /* Vibrant purple */
+      color: #ffffff;
+      border-radius: 5px;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px; /* Space above the button */
+    }
+    .dropzone {
+      display: none;
+      flex: 1;
+    }
+  }
+  
+  .landing-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  .big-btn {
+    padding: 20px 40px;
+    font-size: 18px;
+    color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    background-color: #00bcd4; /* Vibrant cyan */
+    box-shadow: 0px 8px 15px rgba(0, 188, 212, 0.3);
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .big-btn:hover {
+    background-color: #0097a7; /* Darker cyan */
+    transform: scale(1.05); /* Slightly larger on hover */
+  }
+  
+  .page-header {
+    font-size: 24px;
+    color: #ffffff;
+    background-color: #f44336; /* Vibrant red */
+    box-shadow: 0px 5px 10px rgba(244, 67, 54, 0.2);
+    padding: 25px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .dropzone {
+    padding: 40px;
+    font-size: 16px;
+    color: #ffffff;
+    border: 2px dashed #ff5722; /* Vibrant orange */
+    background-color: #4caf50; /* Vibrant green */
+    border-radius: 10px;
+    margin-top: 20px; /* Add margin above the dropzone */
+  }
+  
+  .button {
     padding: 15px 30px;
-    font-size: 20px;
-    color: white;
+    font-size: 16px;
+    color: #ffffff;
     border: none;
-    border-radius: 30px;
-    background-color: purple;
-    background-image: linear-gradient(-45deg, #FF3D77, #338AFF);
-    box-shadow: 0px 10px 20px 0px rebeccapurple;
+    border-radius: 10px;
+    background-color: #e91e63; /* Vibrant pink */
     outline: none;
     cursor: pointer;
-}
-
-.big-btn:hover{
-    background-image: linear-gradient( #FF3D77, #338AFF);
-}
-
-.page-header{
-    font-size: 20px;
-    color: white;
-    background-image: linear-gradient(-45deg, #FF3D77, #338AFF);
-    box-shadow: 0px 10px 20px 0px rebeccapurple;
-    padding: 20px;
-}
-
-.dropzone{
-    padding: 30px;
-    font-size: 15px;
-}
-
-.button{
-    padding: 10px;
-    font-size: 15px;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    background-color: dodgerblue;
-    outline: none;
-    cursor: pointer;
-}
-
-.busy{
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .button:hover {
+    background-color: #c2185b; /* Darker pink */
+    transform: scale(1.05); /* Slightly larger on hover */
+  }
+  
+  .busy {
     position: fixed;
-    left: 0px;
-    top: 0px;
-    bottom: 0px;
-    right: 0px;
-    background: rgb(0,0,0,0.5);
-    color: white;
-    font-size: 20px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(255, 87, 34, 0.8); /* Vibrant orange overlay */
+    color: #ffffff;
+    font-size: 22px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100%;
+    z-index: 1000;
     display: none;
-}
+  }
+  

@@ -1,38 +1,162 @@
-.App {
-  text-align: center;
+/* Updated index.css */
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-size: 16px;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f4f8; /* Soft light gray */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: #333; /* Dark gray for text */
 }
 
-.App-link {
-  color: #61dafb;
+code {
+  font-family: 'Fira Code', monospace;
+  font-size: 14px;
+  background-color: #e0e4e8; /* Soft gray background */
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: #333; /* Dark gray text */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.options {
+  overflow: auto;
+  background-color: #ffffff; /* White background */
+  border-left: 2px solid #c1c7d0; /* Soft gray border */
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px; /* Margin at the bottom */
+  border-radius: 8px; /* Rounded corners */
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.option-btn {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .options {
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #ffffff; /* White background */
+    padding: 20px;
+    display: none;
+    border-radius: 12px 12px 0 0; /* Rounded corners at the top */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Shadow effect */
   }
-  to {
-    transform: rotate(360deg);
+  .option-btn {
+    display: inline;
+    padding: 10px 20px;
+    background-color: #b0bec5; /* Soft blue-gray */
+    color: #ffffff;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px; /* Space above the button */
   }
+  .dropzone {
+    display: none;
+    flex: 1;
+  }
+}
+
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.big-btn {
+  padding: 20px 40px;
+  font-size: 18px;
+  color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  background-color: #6c757d; /* Soft gray-blue */
+  box-shadow: 0px 8px 15px rgba(108, 117, 125, 0.3);
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.big-btn:hover {
+  background-color: #5a6268; /* Slightly darker gray-blue */
+}
+
+.page-header {
+  font-size: 24px;
+  color: #ffffff;
+  background-color: #6c757d; /* Soft gray-blue */
+  box-shadow: 0px 5px 10px rgba(108, 117, 125, 0.2);
+  padding: 25px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.dropzone {
+  padding: 40px;
+  font-size: 16px;
+  color: #333; /* Dark gray text */
+  border: 2px dashed #c1c7d0; /* Soft gray border */
+  background-color: #ffffff; /* White background */
+  border-radius: 10px;
+  margin-top: 20px; /* Add margin above the dropzone */
+}
+
+.button {
+  padding: 15px 30px;
+  font-size: 16px;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  background-color: #6c757d; /* Soft gray-blue */
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #5a6268; /* Slightly darker gray-blue */
+}
+
+.busy {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(108, 117, 125, 0.8); /* Soft gray overlay */
+  color: #ffffff;
+  font-size: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  z-index: 1000;
+  display: none;
 }
